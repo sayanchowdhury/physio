@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Physio Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <div class="toprow">
+      <h1 id="pageTitle">Physio Tracker</h1>
+      <a id="backLink" class="back hidden" href="#/">← All routines</a>
+    </div>
+    <p id="subtitle" class="sub"></p>
+
+    <div class="toolbar">
+      <label>
+        <span id="langLabel">Language:</span>
+        <select id="langSelect">
+          <option value="en" selected>English</option>
+          <option value="bn">Bengali</option>
+          <option value="hi">Hindi</option>
+        </select>
+      </label>
+
+      <label class="toggle">
+        <input id="showImagesToggle" type="checkbox" checked />
+        <span id="showImagesLabel">Show pictures</span>
+      </label>
+
+      <span class="spacer"></span>
+
+      <button id="printBtn" class="btn" type="button">Print</button>
+    </div>
+
+    <div id="routineControls" class="toolbar hidden">
+      <label>
+        <span id="sectionLabel">Section:</span>
+        <select id="sectionSelect"></select>
+      </label>
+
+      <button id="resetBtn" class="btn secondary" type="button">Reset routine</button>
+    </div>
+
+    <div id="progressWrap" class="progress hidden" aria-live="polite">
+      <span id="progressText">0/0 completed</span>
+      <div class="bar"><div id="progressBar" class="barFill"></div></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="home" class="home"></div>
+    <div id="cards" class="cards hidden"></div>
+  </main>
+
+  <footer class="container footer">
+    <small id="safetyText"></small>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
